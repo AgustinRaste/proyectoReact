@@ -1,0 +1,12 @@
+.itemContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    height: 100px;
+    width: 100%;
+}
+
+h2{
+    color: brown;
+}
