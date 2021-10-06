@@ -1,0 +1,17 @@
+.divPruebas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: palevioletred;
+    height: 200px;
+    width: 100%;
+}
+
+h2{
+    color: brown;
+}
+
+/* .count{
+
+} */
