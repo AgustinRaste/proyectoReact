@@ -1,40 +1,42 @@
 import React, {useState} from 'react'
 import './ItemCount.css'
 
-const ItemCount = ({stock, initial}) => {
-    const [count, setCount] = useState(initial)
+const ItemCount = ({stock, setItems, items}) => {
+    
+    
+    
+    const [count, setCount] = useState(1)
     // Funcion para sumar 1 al contador
     function addCount(){
-        setCount(count+1)
+        if(count >= stock){
+            alert("No hay mas stock")
+        }else{
+            setCount(count+1)
+        }
     }
     // Funcion para restar 1 al contador
     function rmCount(){
-        setCount(count-1)
+        if(count == 1){
+            alert("NO SE PUEDEN TENER CANTIDADES MENORES A " + 1)
+        }else{
+            setCount(count-1)
+        }
+        
     }
 
-    if(count > stock){
-        alert("No hay mas stock")
-        setCount(stock)
-        // Esta ultima linea es para que, en caso de llegar a ahcer un click antes de que salte la alerta
-        // el valor del contador queda igual al del stock
+    const addItem = () =>{
+        setItems(items + count)
     }
 
-    if(count < initial){
-        alert("NO SE PUEDEN TENER CANTIDADES MENORES A " + initial)
-        setCount(initial)
-    }
+   
     return (
         <div className="divCount">
-            {/* <h4>Esto es un div para pruebas</h4>
-            <h3>Nombre: {name}</h3>
-            <h3>Nombre dinamico: {nombre}</h3>
-            <button onClick={()=> setName("Julio Cesar")}>Cambiar a Julio Cesar</button>
-            <button onClick={()=> setName("Juan Carlos")}>Cambiar a Juan Carlos</button> */}
-            <div className = "count">
-                <button onClick = {() => addCount()}>+</button>
-                <h1>{count}</h1>
-                <button onClick = {() => rmCount()}>-</button>
-                
+            
+            <div className="w-100 d-flex">
+                    <button className="btn btn-outline-secondary" onClick = {() => rmCount()}>-</button>
+                        <span>{count}</span>
+                    <button className="btn btn-outline-secondary" onClick = {() => addCount()}>+</button>
+                    <a href="#" className="btn btn-primary" onClick={()=>addItem()}>Add</a>
             </div>
         </div>
     )
