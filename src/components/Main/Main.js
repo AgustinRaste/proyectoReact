@@ -6,7 +6,7 @@ import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import NavBar from '../NavBar/NavBar'
 import Pruebas from '../Pruebas/Pruebas'
 
-const Main = () => {
+const Main = ({items, setItems}) => {
 
     // const [result, setResult] = useState(null)
 
@@ -35,11 +35,10 @@ const Main = () => {
 
 
 
-    const [items, setItems] = useState(0)
+    // const [items, setItems] = useState(0)
 
     return (
         <>
-            <NavBar items={items}/>
             <ItemListContainer
                 items={items}
                 setItems={setItems}
