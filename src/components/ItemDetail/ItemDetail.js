@@ -1,8 +1,7 @@
 import React from 'react'
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({name, desc, stock, img, setItems, items}) => {
    
-    console.log("ESTE ES EL Item " + item)
 
     return (
         <div className="card" style={{width:"13 rem"}}>

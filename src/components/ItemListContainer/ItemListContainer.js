@@ -42,7 +42,6 @@ const ItemListContainer = ({greeting, items, setItems, itemsList}) => {
         <div>
             <ItemList itemsArr={itemsArr} items={items}
             setItems={setItems}/>  
-            <ItemDetailContainer itemsArr={itemsArr}/>
         </div>
     )
 }

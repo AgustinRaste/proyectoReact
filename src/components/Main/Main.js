@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {useEffect} from 'react'
 import Item from '../Item/Item'
 import ItemCount from '../ItemCount/ItemCount'
+import ItemDetailContainer from '../ItemDetailCotaainer/ItemDetailContainer'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import NavBar from '../NavBar/NavBar'
 import Pruebas from '../Pruebas/Pruebas'
@@ -44,6 +45,7 @@ const Main = ({items, setItems}) => {
                 setItems={setItems}
                 // itemsList={result}
             />
+            <ItemDetailContainer/>
         </>
     )
 }
