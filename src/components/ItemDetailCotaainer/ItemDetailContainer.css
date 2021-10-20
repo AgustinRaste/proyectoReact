@@ -1,0 +1,7 @@
+.detailContainer{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}

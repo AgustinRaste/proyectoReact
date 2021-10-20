@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailCotaainer/ItemDetailContainer';
 
 
 
@@ -23,13 +24,16 @@ function App() {
         <h1>ACA VA LA SECCION HOME</h1>
       </Route>
       <Route exact path="/tienda">
-        <Main items={items} setItems={setItems}/>
+        <Main/>
       </Route>
       <Route exact path="/nosotros">
         <h1>ACA VA LA SECCION NOSOTROS</h1>
       </Route>
       <Route exact path="/contacto">
         <h1>ACA VA LA SECCION CONTACTO</h1>
+      </Route>
+      <Route exact path="/tienda/item/:id">
+        <ItemDetailContainer items={items} setItems={setItems}/>
       </Route>
     </BrowserRouter>
   );

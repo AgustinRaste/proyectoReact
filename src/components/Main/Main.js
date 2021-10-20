@@ -45,7 +45,6 @@ const Main = ({items, setItems}) => {
                 setItems={setItems}
                 // itemsList={result}
             />
-            <ItemDetailContainer/>
         </>
     )
 }
